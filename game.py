@@ -1,4 +1,4 @@
-#guess the no. game
+#guess the no. game with ai bot
 
 import random
 
@@ -11,7 +11,7 @@ def get_ai_num():
     num_by_ai = random.randint(1, 1000)
     return num_by_ai
 
-print('Welcome to the number guessing game.')
+print('######################################\n#Welcome to the number guessing game.#\n######################################')
 while gameRunning == True:
     guessedNum = int(input('Guess the no. between 1 and 1000: '))
     ai_num = get_ai_num()
@@ -23,12 +23,10 @@ while gameRunning == True:
             break
 
     if ai_num == num:
-        print(f"AI guessed the no. it was {num}")
+        print(f"AI guessed the no. it was {num}. AI won this game.")
         gameRunning = False
     else:
         print(f"AI chose {ai_num}.")
-
-
     
     if guessedNum > num:
         print('Try again. Hint: guessed number is greater than the actual number.')
